@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-teste  
+spec:
+  containers:
+  - name: pod-teste
+    image: linuxtips/opa
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "0.2"
+  imagePullSecrets:
+  - name: dockerhub-secret
+    
